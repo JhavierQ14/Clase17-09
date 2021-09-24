@@ -1,0 +1,31 @@
+﻿@model SoluParcial.Models.ClsValidacion
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "Registros", FormMethod.Post))
+{
+
+    @Html.LabelFor(n => n.Nombre)
+    @Html.TextBoxFor(n => n.Nombre)
+    @Html.ValidationMessageFor(n => n.Nombre)
+    <br />
+    @Html.LabelFor(m => m.Edad)
+    @Html.TextBoxFor(m => m.Edad)
+    @Html.ValidationMessageFor(m => m.Edad)
+    <br />
+    @Html.LabelFor(s => s.Sexo)
+    @Html.TextBoxFor(s => s.Sexo)
+    @Html.ValidationMessageFor(s => s.Sexo)
+    <br />
+    @Html.LabelFor(t => t.tipoEstudio)
+    @Html.TextBoxFor(t => t.tipoEstudio)
+    @Html.ValidationMessageFor(t => t.tipoEstudio)
+    <br />
+    <input type="submit" />
+
+}
+
